@@ -1,4 +1,4 @@
-# BSD_C_language - BTP100 Course Repository
+# BSD_C_lang - BTP100 Course Repository
 
 
 ## Overview
