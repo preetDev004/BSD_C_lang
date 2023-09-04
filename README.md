@@ -46,5 +46,5 @@ I welcome feedback, suggestions, and contributions/improvements to this reposito
 
 Thank you for visiting the BTP100 repository. Happy coding!
 
+![seneca-logo_200x75](https://github.com/preetDev004/BSD_C_lang/assets/114741744/2f2bd753-01cc-4f04-a0db-80e78589eaae)
 
-![seneca-logo_200x75](https://github.com/preetDev004/BSD_C_language/assets/114741744/33db3c18-5e3f-411b-a5cc-40d6dcc437eb)
