@@ -1,0 +1,71 @@
+1. Determining the customer preference based on the number of servings to the 
+   available coffee bag weights required a more complex logical expression. 
+   Copy your submitted code for only this part of the logic, and explain the following:
+   A) How many relational expressions did you use and identify each of them.
+   B) How many logical expressions did you use and identify each of them.
+
+Ans--> 
+     CODE :
+       printf("--------------------+-------------+-------+\n");
+       printf("  |     Coffee      |  Packaged   | With  |\n");
+       printf("ID|      Type       | Bag Weight  | Cream |\n");
+       printf("--+-----------------+-------------+-------+\n");
+       printf(" 1|        %d        |      %d      |   %d   |\n",
+              ((userCoffee == coffee1Type) || (userCoffee + 32 == coffee1Type) || (userCoffee - 32 == coffee1Type)),
+              ((userServing >= 1 && userServing <= 4) * (weight1 >= 250 && weight1 < 500) ||
+               (userServing >= 5 && userServing <= 9) * (weight1 >= 500 && weight1 < 1000) || (userServing >= 10) * (weight1 >= 1000)),
+              (userIsCream == isCreamNice1 || userIsCream + 32 == isCreamNice1 || userIsCream - 32 == isCreamNice1));
+
+       printf(" 2|        %d        |      %d      |   %d   |\n",
+              ((userCoffee == coffee2Type) || (userCoffee + 32 == coffee2Type) || (userCoffee - 32 == coffee2Type)),
+              ((userServing >= 1 && userServing <= 4) * (weight2 >= 250 && weight2 < 500) ||
+               (userServing >= 5 && userServing <= 9) * (weight2 >= 500 && weight2 < 1000) || (userServing >= 10) * (weight2 >= 1000)),
+              (userIsCream == isCreamNice2 || userIsCream + 32 == isCreamNice2 || userIsCream - 32 == isCreamNice2));
+
+       printf(" 3|        %d        |      %d      |   %d   |\n\n",
+              ((userCoffee == coffee3Type) || (userCoffee + 32 == coffee3Type) || (userCoffee - 32 == coffee3Type)),
+              ((userServing >= 1 && userServing <= 4) * (weight3 >= 250 && weight3 < 500) ||
+               (userServing >= 5 && userServing <= 9) * (weight3 >= 500 && weight3 < 1000) || (userServing >= 10) * (weight3 >= 1000)),
+              (userIsCream == isCreamNice3 || userIsCream + 32 == isCreamNice3 || userIsCream - 32 == isCreamNice3));
+
+
+    (A)   To identify coffee weights and bags i used total "30" Relational expressions.
+    (B)   To identify coffee weights and bags i used total "15" Logical expressions.
+
+      --> This number of expressions helped me not only to code for the given output but all the
+        input possibilities.
+
+2. Referring to Part-1 output #9, show how that logic can be coded in TWO correct ways,
+   one applying DeMorgan’s Law and the other way not using DeMorgan’s Law. Also, identify
+   what method you used in your submitted answer for Part-1.
+
+Ans-->
+    My Logic:
+      ((p3Id != p1Id) && (p3Id != p2Id))   
+
+    With DeMorgan’s Law:
+      !((p3Id == p1Id) || (p3Id == p2Id))
+
+    Without DeMorgan’s Law:
+      ((p3Id != p1Id) && (p3Id != p2Id))
+
+3. Using the variables you used in Part-2, demonstrate two ways you can organize them, 
+   so it is optimized for easy to maintain code and contributes towards clarity in how
+   data is stored in the program.
+
+Ans-->
+     1--> Declare all the variables togather according to their data-type.
+       ( Declaring the variables around the code looks messy and readbility is also low.)
+
+       Ex.
+       -->  const double GRAMS_IN_LBS = 453.5924;
+            char coffee1Type, coffee2Type, coffee3Type, isCreamNice1, isCreamNice2, isCreamNice3, userCoffee, userIsCream;
+            int weight1, weight2, weight3, userServing;
+
+     2--> Giving logical names to the variables is the most important way to make it optimised and
+          readble.
+
+       Ex.
+       -->  char coffee1Type  = it determines that this variable is storing a coffee type for coffee 1.
+   
+      

@@ -1,0 +1,56 @@
+1. With the completion of this workshop, you must have begun to appreciate why code formatting is important.
+   Explain how you made your code – especially the iteration and selection logic parts –
+   easy to read and maintain.
+
+Ans-->       
+      - I used proper Spacing and parenthesis to Identify where a perticular if or else statement is ending.
+      - I did proper indenting before every statement to understand in which code block it is in.
+      - I used comments to understand code now and in future.
+      - I tried to repeat less.
+         
+
+2. Nested logic is an important feature of programming in any language. Identify and briefly discuss
+   the biggest impact on how this workshop could be coded if nesting were not possible.
+
+Ans--> Nested logic gives us ability to place control structures, such as loops and conditionals,
+       inside other control structures.
+
+   --> If nested logic were not there in this workshop then it would be much more difficult to write
+       compact, readable code which can produce the given output efficiently even it becomes hard to 
+       debug and understand that kind of code which does not have nested logic in it. 
+
+
+3. Consider the following scenario: you are programming logic that requires a user to input a
+   value between 1 and 5, and for each value within that range, you had to perform something unique.
+   You would have to apply selection to validate the entered values so you can implement the given
+   logic for a specific entered range value. Explain why is it inefficient to achieve this using a 
+   series of “if” optional path constructs instead of the preferred “if/else if...” alternative path logic?
+
+Ans--> According to my understanding "if" statements here would create unnecessary checks
+       which slowers the code execution.
+       For example,
+            if (x==1)     |  Here, even though the first if condition becomes true all other if statements will 
+               code          be checked because these are the optional paths.
+            if (x==2)     |
+               code
+            if (x==3)     |  even we can not make any default statement because there is no else here.
+               code          like x is not 1,2,3,4 and 5 what it going to do, nothing.
+            if (x==4)     |
+               code
+            if (x==5)     |
+               code
+               
+   --> On the other hand, if we use "if/else if..." then the code will stop checking other conditions if one of 
+       them becoms true we can also write an else statement.
+       For example,
+            if (x==1)     |  Here, even though the first if condition becomes true all other else if statements will 
+               code          NOT be checked because these are the alternative paths.
+            else if (x==2)|
+               code
+            else if (x==3)| 
+               code    
+            else if (x==4)|
+               code
+            else if (x==5)|
+               code
+            else          |   (Default statement)

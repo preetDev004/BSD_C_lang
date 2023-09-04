@@ -1,0 +1,59 @@
+1. Why are there three types of iteration constructs if we can make any one of them behave the same way?
+   Refer to your code in this workshop to help backup your answer (do NOT include the code in your answer).
+   Typically, when working with arrays, there is one iteration construct we favour – what is it and explain
+   why it is more preferred over the other options.
+
+Ans-->  We uses three different loops because each of them have different use cases.
+     - we use 'for' loop mostly when we know how many times the block of code is going to execute.
+     - we use 'while' loop when we have to repeat a block of code until a certain condition become false or true.
+     - we use 'do-while' loop as the same way of 'while' loop but difference is in this loop the block of code
+       will be executed at least once
+
+    --> Refering to arrays we mostly use 'for' loop because it allow us to iterate whole array with an index
+        variable. We do not have to increment the iteration variable manually and check the condition when to 
+        break it.
+        But in while and do-while loop we have to do above mentioned points manually.
+
+2. Describe what you did to both test and debug your program. How did you go about finding where the
+   problems were located (explain how you did this for both syntactic and semantic problems)?        
+
+Ans--> Testing: for testing my program i used lot of different sample input cases apart from given in the
+                workshop from which i can ensure that code is working as expected or not.   
+
+   --> Debug: First i run the code if there is any error which compiler encounters then first i see in which 
+              line the error is coming then i figure out either it is a syntactic or symmantic error.
+
+            - for syntactic error i read the error message and go to the line where error encountered and then
+              i see what i am missing in syntax (comma, parenthisis, semicolon or anything else).
+
+            - for symmantic error it can be seen in the output if it is not as expected. i look up for 
+              what caused it either i have given wrong data-type or my array is declared for only 3 elements
+              and i tried to store 5 or anything else. even i use some debugging extentions to make work easy.
+
+3. When attempting to submit your work, you receive the following error feedback from the submitter:
+   Checking output:
+        In line number 6 of your output:
+        The output should be:
+        Enter your monthly NET income: $0
+                                        ^
+        Enter your monthly NET income: $567.89
+        ^
+        Unmatched character details:
+        The character in column 33 is supposed to be:
+          [0] ASCII code(48)
+        but you printed
+          [5] ASCII code(53)
+        Outputs don't match. Submission aborted!
+        To see exactly what is wrong, open the following two files in this
+        directory and compare them:
+        Your output file:    output.txt
+        Correct output file: w6p2_master_output.txt
+        But your output is:
+   Using the above explicit information, explain each step you must take to successfully identify and fix your error.              
+             
+Ans-->
+    This is simple it is the error saying i mistakenly enterd 0 in the input where it must be 5 and the output
+    does not match.
+    - Form here i go back and run the code again and try to enter 567.89 in the line 33 so i can get the 
+      expected output and error can be solved.
+                  

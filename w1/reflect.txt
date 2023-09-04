@@ -1,0 +1,27 @@
+1. Do you have any previous programming experience? If 
+   so, what language(s)? If not, what are your initial 
+   thoughts about the C language and this course?
+
+Ans---> Yes, I have some coding experience which was in
+   high school. Though, I have knowledge of various 
+   programming languages like C, C++, Python and JavaScript 
+   but I have written more lines of code in C and JavaScript 
+   and that is why I am more familiar with them! 
+
+2. Describe your understanding of the compiling process 
+   of a C text file into an executable program.
+
+Ans---> In C language code is basically written in the 
+   "ENGLISH" language but the computer does not understand it so
+   the compiler convert this low level language into machine 
+   level language which is binary/hexadecimal form and then computer
+   understands the commands and executes!
+
+3  What do you hope to achive in this course? describe 
+   your goals and expectations.
+
+Ans--->  My learning goals from this course to be proficient
+   in C language and to improve logic so I can write more
+   efficient code. I am expecting that this course will help me 
+   in my future to learn other languages/technologies and to be a
+   better developer as well.

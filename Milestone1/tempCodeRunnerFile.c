@@ -1,0 +1,2 @@
+
+        if (digitLen == 10)

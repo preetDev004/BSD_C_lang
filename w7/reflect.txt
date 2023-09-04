@@ -1,0 +1,38 @@
+1. Were you successful in coding non-repetitive sections of logic in the game play portion of this workshop 
+   (drawing of the ruler, board, player position, etc.)? If so, how did you accomplish this (don’t provide your
+   code in your answer)? If not, why? Explain precisely what you struggled with and refer to the logic of the workshop
+   to justify your answer.  
+
+Ans--> Yes, i was successful in coding non-repetitive sections of logic in the game play portion of this workshop as 
+       i used nested logic to do the board and ruler and user define data type to collect all the info and have the record
+       of all the previos steps and what found on each step and every step all these were put in a single while loop which 
+       was controlled by a flag variable.
+
+2. Explain how the use of structures simplified your program. Provide proof of your argument by contrasting the alternatives
+   – do not include code in your answer – you must explain in simple terms the impact the concept of structures has in our programming strategies.
+
+Ans--> As structures are user define data type it allows us to group connected/similar variabes, arrays, etc. togather which
+       helps to code more redable and clean and even it makes easier access to it by knowing for whom the variable is created 
+       For example, here all the variables and arrays created in the structure Playerinfo identifies that they all are made for
+       player.
+
+       And if these structures were not there in this workshop it migth become hard to identify each variable for what it is created
+       and also it reduces the maintainability and readability of code as all variabes are declared in chunk.
+
+3. Examine your code and determine the maximum number of levels of nesting (deepest) you ended up using in your program logic.
+   Provide a simple indented outline that illustrates your answer (copy only the construct line for each level and do not include
+   all the code within unless there is another nested construct). For example, two levels of nesting as an outline:       
+
+Ans--> The maximum number of levels of nesting i did is 4 levels.
+
+       while(flag){
+        if(movesAllowed != game.nMoves){
+            for(i = 0; i < game.pathLength; i++){
+                if(i == move-1){
+                    for(j = 0; j <= i; j++){
+
+                    }
+                }
+            }
+        }
+       }  

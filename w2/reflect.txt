@@ -1,0 +1,65 @@
+1. float price1 = 17.96f, price3 = 17.98f;
+   double price2 = 17.96, price4 = 17.98;
+   printf("1. 17.96 = %f (as cents:%d)\n", price1, (int)(price1 * 100));
+   printf("2. 17.96 = %lf (as cents:%d)\n", price2, (int)(price2 * 100));
+   printf("3. 17.98 = %f (as cents:%d)\n", price3, (int)(price3 * 100));
+   printf("4. 17.98 = %lf (as cents:%d)\n", price4, (int)(price4 * 100));
+
+Ans--> It is because of the CPU or the environment we are using or 
+       it could be because of that float variable is not able to store
+       the value with exact precision. Size of float might be the cause too.
+   --> for another float variable it might posible that it stored the exact value 
+       with pricison.
+       other variables are double type so i think it have much space in memory 
+       to store it.
+       |variable      size|
+       | float      4 byte|
+       | double     8 byte|
+
+2.  int money = 7245;
+    printf("1. $%.2lf\n", money / 100.0);
+    printf("2. $%.2lf\n", money / (double)100);
+    printf("3. $%.2lf\n", (double)money / 100);    
+
+Ans--> Here we did type-casting simply we change a variable data-type
+       to another data-type thats why output was accurate.
+       It could be done with in two ways implicit and explicit this 
+       both together known as coercion.
+
+       we are promoting the final answer to be in double form and not in int 
+       and thats why we are getting precise answers.
+
+3.  int result, money = 7245;
+    result = money / 100;
+    printf("1. $%.2lf\n", money / 100);
+    printf("2. $%d\n", money / 100);
+    printf("3. $%.2lf\n", result);
+    printf("4. $%d\n", result);   
+
+Ans--> a) What is the value of the variable result? Explain why.     
+       -> value stored in result variable is 72 because the variable 
+          result in int type but we are trying to assign decimal value 
+          so here compiler automatically trucates the value and remove the
+          decimal and round it off to nearest value because int stores 
+          whole number.
+
+        b) What values are displayed for samples 1, 2, 3, and 4?
+        -> 1. $0.00
+           2. $72
+           3. $0.00
+           4. $72  
+
+        c) What can you conclude about the printf function that causes samples 1 and 3 not to work as expected?
+        -> whenever we have to print a variable we need to pass a format specifire and 
+           variable as argument which matches that specifire's data-type.
+
+        -> In sample 1 and 3 we can see the varible calculation is giving us integer output or 
+           we can say whole number and to represent int we use "%d" as format specifire but 
+           here we used double's format specifire and that is why output was not what we expected.
+
+
+
+
+
+
+

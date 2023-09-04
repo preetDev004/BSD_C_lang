@@ -1,0 +1,40 @@
+1. Several helper functions were designed to return values in two different ways (via an argument and/or by return).
+   Explain at least one benefit of this “feature” and how it increases usability/flexibility and at least one negative
+   reason why having functions designed to work in this way may not be desirable.
+
+Ans--> One benefit of this "feature" is increased flexibility and usability. By allowing us to choose how we want
+       to receive the output of that helper function, it makes the function more versatile and reusable in many cases. 
+       For example, if we need to pass the output of this function as an argument to another function, we can use 
+       the argument-based output to avoid unnecessary function calls and also it's final value can be stored in another
+       variable which also can be utilzed.  
+
+   --> Mixing these two approaches can make the code more complex and harder to reason about. It can also lead to 
+       subtle bugs if the caller of the function does not handle both cases correctly. For instance, if i want value by return 
+       and i do not provide NULL pointer then it can be an error.
+
+
+2. According to the design principles for structured design, functions should be highly cohesive and have low coupling. 
+   Identify one function in the workshop that demonstrates less than perfect cohesion, and one function that demonstrates 
+   coupling that could be improved. For each identified function, briefly explain what you would do to improve them.
+
+Ans--> Here in this workshop "start" function is cohesive and "calculateReportData" is couppled.
+
+   --> start is there and work with a lot of different function to achieve one single goal. To improve cohesion,
+       it is important to ensure that elements within a module are strongly related and work together effectively
+       towards a common goal.
+
+   --> calculateReportData is there which highlt rely on other function to get its value. To reduce coupling, one 
+       approach is to use interfaces or abstractions to decouple modules from each other. This can help to minimize 
+       the number of calls between modules and make them more independent.
+
+3. What advantages are there in passing structures to functions? Based on your readings this week (for next week’s topics)
+   what could be done in the passing of this data to functions to make it more efficient? Explain how the “displayCatfoodData” 
+   function could be improved.
+
+Ans--> Passing structures to functions can help modularize code and make it easier to read and maintain. 
+
+   --> If we don't need to modify the data in the function, we can use a const pointer to avoid unnecessary copies.
+
+   --> In “displayCatfoodData” as we passed a lot of arguments which is not a good practice and lowers the efficiency in place of
+       that we can provide whole structure which is 'catFood' in my case and then access all properties by '.' it would be efficient
+       and less complex.

@@ -1,0 +1,75 @@
+/*/////////////////////////////////////////////////////////////////////////
+                        Assignment 1 - Milestone 3
+                        
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+/////////////////////////////////////////////////////////////////////////*/
+
+
+Ans-1) 
+    I created only two extra function in the clinic module to help me out in this milestone 3!
+
+     i) struct Date inputDate(); 
+     - PURPOSE : 
+            I needed to get input from user for date( year, month, day) while adding new appointment and removing an existing 
+            appointment so in both cases making new variables like year, month and day was not a good idea even it reduces the
+            efficiency of the code so I decided to make this function which return the date type variable which can help me 
+            to validate the date user entering.
+
+     - VALUES  :
+            The "inputDate()" function takes user input for a date and returns a struct Date type variable containing the year,
+            month, and day values entered by the user. It also checks for the validity of the input date, taking leap years and
+            the number of days in each month into consideration. The function returns a struct Date type variable, which can be
+            used to represent the date value in other parts of the code like while adding or removing an appointment. Therefore,
+            this function adds the capability to input and validate a date value to the program.
+            
+
+     ii) void bubbleSort(struct Appointment *appointments, int n);
+     - PURPOSE : 
+            In this milestone I had to sort the patients' appointments according to the year, month, day, hour and minute.
+            I needed this bubble sorting algorithm in more than 1 place so copy pasting it more than once is not efficient and 
+            reduce the readability and maintainability of the code as well so I created this function which helped me to avoid
+            repetition (DRY concept). 
+
+     - VALUES  :
+            This function helped me to sort the appointsents data by which it became easy to find the next appointment very clearly as it
+            organised the data in ascending order on their dates and times.
+            This function helped me to achieve desired output in this milestone.
+
+
+Ans-2)  
+    i) scanf requires the program to wait for user input which can slow down the program execution. This can be problematic
+       in programs that require frequent user input such as interactive programs or games. By minimizing the number of 
+       scanf calls, the program can run more efficiently and respond more quickly to user input.
+
+   ii) scanf is that it can be prone to errors if the input is not properly formatted. In some cases, invalid input can 
+       cause the program to crash or behave unpredictably. By reducing the number of scanf calls, we 
+       can reduce the likelihood of input-related errors and make the program more stable.
+
+    -  In this mlestone when I was working with scanf somtimes it was not able to take intended input from user and also 
+       it was getting garbage values even though my input was perfect. It was all because the input buffer that caused
+       while using scanf. reducing its use helped me to debug the code.
+
+
+Ans-3) 
+    i) struct Date inputDate(); 
+              I placed this function in the "Clinic" module because I wanted to get user input of date (year, month, day)
+              and wanted to use into "addAppointment" and "removeAppointment" functions of the module.
+
+              Factor that I consider to to put it in "Clinic" was the return type of the function, as we see the return 
+              type of the function is "struct Date" type and this structure Date was defined in the clinic module so thats 
+              why I had to make it in the Clinic module not in the core module.
+
+   ii) void bubbleSort(struct Appointment *appointments, int n);
+              I placed this function in the "Clinic" module as well because we have to sort the appointments data given and
+              use it "viewAllAppointments" and "viewAppointmentSchedule" functions to display the appointment data in a sorted 
+              manner.
+
+              one point that I consider to to put it in "Clinic" was the arguments the function was taking, as we see one of its arguments
+              was an array of "structure Appointment" type and this structure Date was defined in the clinic module so thats 
+              why I had to make it in the Clinic module not in the core module.
+
+
+    
